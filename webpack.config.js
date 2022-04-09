@@ -13,10 +13,11 @@ const config = {
   output: {
     path: path.resolve(__dirname, "dist"),
   },
-  devServer: {
-    open: true,
-    host: "localhost/test/wordpress",
-  },
+  // devServer: {
+  //   open: true,
+  //   host: "mario.etaptestowy.co.pl",
+  //   port: 3000
+  // },
   plugins: [
     new MiniCssExtractPlugin(),
     new FileManagerPlugin({
