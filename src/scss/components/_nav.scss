@@ -1,0 +1,11 @@
+@use '../utils/variables';
+.mega-menu{
+    &-link {
+    font-family: variables.$font-family-nav !important ;
+    text-transform: uppercase !important;
+    }
+    &-wrap {
+        @extend .align-self-center;
+    }
+}
+

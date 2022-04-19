@@ -1,0 +1,36 @@
+@use '../utils/variables';
+
+.header {
+    @extend .container-fluid;
+    background-color: variables.$background;
+    
+    &__content {
+        @extend .container,.d-flex ,.justify-content-between,.align-items-center, .align-items-md-start, .px-0;
+    }
+    &-socials {
+        @extend .d-none ,.d-lg-flex, .justify-content-between, .align-items-center, .align-self-center;
+    }
+    &-socials__item {
+        @extend .px-3, .text-decoration-none, .d-flex, .align-items-center;
+    }
+    &-socials__phone-number {
+        @extend .ms-3;
+        font-family: variables.$font-family-nav !important;
+        color: variables.$color-header;
+        
+    }
+}
+
+.page-logo {
+    
+    &__img {
+        @extend .img-fluid, .py-3;
+        
+    }
+    @media (max-width:48rem) {
+        // padding: 0.5rem 0;
+        &__img {
+            max-width: 40px;
+        }
+    }
+}

@@ -1,0 +1,55 @@
+@use "../utils/variables";
+@import "node_modules/bootstrap/scss/vendor/_rfs.scss";
+@import "./home-about-us";
+
+.events {
+  @extend .container-fluid, .py-5;
+  background-color: variables.$background;
+//   @media (min-width:62rem) {
+//       padding-top: 20rem;
+//   }
+
+  &__container {
+    @extend .container;
+  }
+  &__header {
+
+    @extend .about-us__header, .mb-5;
+  }
+  &__header--serif {
+    @extend .about-us__header--serif;
+  }
+  &__row {
+    @extend .row;
+    &--loop {
+      @extend .w-75, .mx-auto, .text-center;
+    }
+  }
+  &__item {
+    @extend .col-12, .col-md-4, .d-flex, .align-items-center;
+  }
+}
+.event {
+  @extend .col-12, .mb-4;
+  &__img {
+    @extend .mb-2;
+  }
+  &__text {
+    font-family: variables.$font-primary;
+    text-transform: uppercase;
+  }
+}
+
+.event-offer {
+  @extend .col-12, .text-center, .mb-5;
+
+  &__text {
+      font-family: variables.$font-tertiary;
+      @include font-size(1.5rem);
+      margin: 6rem 0 4rem 0;
+
+  }
+  &__link {
+      @extend .about-us__link;
+  }
+}

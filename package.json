@@ -33,6 +33,8 @@
     "webpack-dev-server": "^4.8.1"
   },
   "dependencies": {
-    "bootstrap": "^5.1.3"
+    "bootstrap": "^5.1.3",
+    "jquery": "^3.6.0",
+    "slick-carousel": "^1.8.1"
   }
 }

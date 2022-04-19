@@ -1,0 +1,5 @@
+@use '../utils/variables';
+.contact-cta {
+    background-color: variables.$background-contact-cta;
+    color: variables.$color-contact-cta;
+}

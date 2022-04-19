@@ -1,0 +1,5 @@
+@use '../utils/variables';
+
+.footer {
+    background-color: variables.$background-footer;
+}

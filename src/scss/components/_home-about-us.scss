@@ -1,0 +1,68 @@
+@use "../utils/variables";
+@import './hero';
+@import "node_modules/bootstrap/scss/vendor/_rfs.scss";
+
+.about-us {
+    @extend .container-fluid, .py-5;
+
+    &__container {
+        @extend .container;
+    }
+    &__header {
+        @extend .text-center;
+        @include font-size(3.75rem);
+        font-weight: 600;
+        // margin-top: 8.75rem;
+        // margin-bottom: 5rem;
+        text-transform: uppercase;
+        color: variables.$primary;
+        font-family: variables.$font-primary;
+        &--serif {
+            @extend .d-block;
+            @include font-size(2.5rem);
+            font-weight: 400;
+            font-family: variables.$font-tertiary;
+            text-transform: none;
+        }
+    }
+    &__row {
+        @extend .row;
+    }
+    &__text {
+        @extend .col-12, .col-md-6, .text-center, .mx-auto, .mx-md-0;
+        margin-bottom: 2.5rem;
+    }
+    &__para {
+        @extend .mx-auto, .text-md-start;
+        max-width:55ch;
+    }
+    &__images {
+        @extend .col-12, .col-md-6, .position-relative;
+        height: 100%;
+        @media (min-width:61.99rem) {
+            height:0;
+        }
+    }
+    &__image, &__image--smaller {
+        max-width: 70%;
+        @extend .position-absolute;
+    }
+    &__image {
+        max-width: 70%;
+        height:auto;
+    }
+    &__image--smaller {
+        max-width: 70%;
+        left:30%;
+        top:4rem;
+    }
+    &__link {
+        @extend .hero__link;
+        
+        margin-bottom: 2.5rem;
+        &-arrow {
+            @extend .d-block, .mt-3, .mx-auto;
+        }
+    }
+    
+}

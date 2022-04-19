@@ -1,0 +1,20 @@
+@use "../utils/variables";
+@import "node_modules/bootstrap/scss/vendor/_rfs.scss";
+
+.testimonial {
+    font-family: variables.$font-primary;
+    @extend  .col-12, .col-md-6;
+    &-content:first-child p {
+        @extend .mx-md-auto, .p-3;
+        max-width: 25rem;
+    
+    }
+}
+.testimonials-slider__controls {
+    @extend .d-none, .d-md-flex, .justify-content-between, .position-absolute, .w-100;
+    top:50%;
+    
+}
+.testimonials__arrow-prev, .testimonials__arrow-next {
+    max-width: 3rem;
+}

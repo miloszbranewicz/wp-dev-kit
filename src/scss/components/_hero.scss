@@ -1,0 +1,86 @@
+@use "../utils/variables";
+@import "node_modules/bootstrap/scss/vendor/_rfs.scss";
+
+.hero {
+  @extend .container-fluid;
+  background-color: variables.$background-hero;
+
+  &__container {
+    @extend .container;
+  }
+  &__row {
+    @extend .row;
+  }
+  &__header {
+    @extend .mb-5;
+    @include font-size(5rem);
+    text-transform: uppercase;
+    font-family: variables.$font-primary;
+    font-weight: 600;
+    color: variables.$color-hero;
+
+    &--serif {
+      font-family: variables.$font-tertiary;
+      font-style: italic;
+      text-transform: none;
+      font-weight: 400;
+      @include font-size(3rem);
+    }
+  }
+
+  &__para {
+    @extend .mb-5, .pe-4;
+    @include font-size(1.25rem);
+    font-family: variables.$font-primary;
+  }
+  &__link {
+    text-decoration: none;
+    font-family: variables.$font-primary;
+    color: variables.$black;
+    @include font-size(1.25rem);
+    text-transform: uppercase;
+  }
+  &__left {
+    @extend .text-center, .text-md-start ,.col-12, .col-md-6, .d-flex, .justify-content-center, .flex-column;
+  }
+  &__right {
+    @extend .col-12, .col-md-6, .position-relative, .overflow-hidden;
+  }
+  &__image {
+    @extend .img-fluid;
+  }
+}
+.hero-slider {
+  @extend .position-absolute;
+  right: 15px;
+  bottom: 0;
+  background-color: variables.$background-hero-slider;
+  
+  &__slide-amounts{
+    @extend .col-6;
+    font-family: variables.$font-primary;
+    font-weight: 600;
+    color: variables.$white;
+  }
+
+  &__current-slide {
+      @include font-size(3rem);
+  }
+  &__total-slides, &__slash {
+      font-weight: 400;
+      @include font-size(2rem);
+  }
+  &__arrow-next {
+      @extend .mb-4;
+  }
+  &__arrow-next,&__arrow-prev {
+      cursor: pointer;
+      @extend .d-block;
+      width: 3rem;
+      height: auto;
+      fill: variables.$white;
+  }
+  &__arrow-prev {
+      transform: rotate(180deg);
+  }
+}
